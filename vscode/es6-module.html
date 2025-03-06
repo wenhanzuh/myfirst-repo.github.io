@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6实例</title>
+</head>
+<body>
+    <button id="fire" onclick="fire()">开火</button>
+    <button id="change" onclick="change()">换弹</button>
+    <div>
+        <span id="msg"></span>
+    </div>
+    <script>
+        const update=()=>{
+            document.getElementById('msg').innerText = '子弹数量:${bullets}';
+        }
+        update();
+        function fire(){
+            if(bullets>0) bullets--;
+            update();
+        }
+        function change(){
+            bullets=6;
+            update();
+        }
+    </script>
+</body>
+</html>
